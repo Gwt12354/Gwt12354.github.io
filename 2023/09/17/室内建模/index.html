@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <title>
+    室内建模 |
+    
+    郭婉婷blog
+  </title>
+  <!-- Icon -->
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="郭婉婷blog" type="application/atom+xml">
+</head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-室内建模" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+  
+  <h1 class="article-title" itemprop="name">
+    室内建模
+  </h1>
+  
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2023/09/17/%E5%AE%A4%E5%86%85%E5%BB%BA%E6%A8%A1/" class="article-date">
+  <time datetime="2023-09-17T04:53:39.147Z" itemprop="datePublished">2023-09-17</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+        <p>indoor报错信息</p>
+<span id="more"></span>
+
+<h2 id="报错和解决"><a href="#报错和解决" class="headerlink" title="报错和解决"></a>报错和解决</h2><h3 id="vue-config-js"><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">报错信息：component name <span class="string">&quot;index&quot;</span> should always be multi-word的</span><br><span class="line">解决方案:在vue.config.js添加下面的代码</span><br><span class="line">添加后文件示例：</span><br><span class="line">const &#123; defineConfig &#125; = require(<span class="string">&#x27;@vue/cli-service&#x27;</span>)</span><br><span class="line">module.exports = defineConfig(&#123;</span><br><span class="line">  transpileDependencies: <span class="literal">true</span>,</span><br><span class="line">  // 添加此行代码</span><br><span class="line">  lintOnSave:<span class="literal">false</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="eslintrc-js"><a href="#eslintrc-js" class="headerlink" title="eslintrc.js"></a>eslintrc.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">3.项目建成后，在eslintrc.js中rules添加</span><br><span class="line"><span class="string">&quot;space-before-function-paren&quot;</span>: 0,</span><br><span class="line"><span class="string">&#x27;quotes&#x27;</span>: <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;semi&#x27;</span>: <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;comma-dangle&#x27;</span>: <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;indent&#x27;</span>: <span class="string">&#x27;off&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Vue2中Element-UI的引入"><a href="#Vue2中Element-UI的引入" class="headerlink" title="Vue2中Element UI的引入"></a>Vue2中Element UI的引入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">打开项目的main.js，添加以下代码即可</span><br><span class="line">import ElementUI from <span class="string">&#x27;element-ui&#x27;</span></span><br><span class="line">import <span class="string">&#x27;element-ui/lib/theme-chalk/index.css&#x27;</span></span><br><span class="line">Vue.use(ElementUI)</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装element-ui"><a href="#安装element-ui" class="headerlink" title="安装element-ui"></a>安装element-ui</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">报错信息：code ERESOLVE：ERESOLVE could not resolve</span><br><span class="line">解决方案：解决办法是在原有命令后面加 -legacy-peer-deps</span><br><span class="line">npm install element-ui --save -legacy-peer-deps</span><br></pre></td></tr></table></figure>
+
+<h3 id="home和about去不掉"><a href="#home和about去不掉" class="headerlink" title="home和about去不掉"></a>home和about去不掉</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">将App.vue中的    </span><br><span class="line">    &lt;nav&gt;</span><br><span class="line">      &lt;router-link to=<span class="string">&quot;/&quot;</span>&gt;Home&lt;/router-link&gt; |</span><br><span class="line">      &lt;router-link to=<span class="string">&quot;/about&quot;</span>&gt;About&lt;/router-link&gt;</span><br><span class="line">    &lt;/nav&gt;</span><br><span class="line">这段代码去掉</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">username别写成usename</span><br><span class="line">一个项目里面的class名不能一样</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何安装和配置-ECharts"><a href="#如何安装和配置-ECharts" class="headerlink" title="如何安装和配置 ECharts"></a>如何安装和配置 ECharts</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">安装:npm install echarts -legacy-peer-deps</span><br><span class="line">配置:main.js中</span><br><span class="line">import * as echarts from <span class="string">&quot;echarts&quot;</span></span><br><span class="line">Vue.prototype.<span class="variable">$echarts</span> = echarts</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何安装和配置-data-view"><a href="#如何安装和配置-data-view" class="headerlink" title="如何安装和配置 data-view"></a>如何安装和配置 data-view</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">安装：npm install @jiaminghi/data-view -legacy-peer-deps</span><br><span class="line">配置:main.js中</span><br><span class="line">import dataV from <span class="string">&#x27;@jiaminghi/data-view&#x27;</span></span><br><span class="line">Vue.use(dataV)</span><br></pre></td></tr></table></figure>
+
+<h3 id="css中margin和padding的区别"><a href="#css中margin和padding的区别" class="headerlink" title="css中margin和padding的区别"></a>css中margin和padding的区别</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">margin是指从自身边框到另一个容器边框之间的距离，也就是容器的外边距。</span><br><span class="line">padding是指自身边框到自身内部另一个容器边框之间的距离，也就是容器的内边距。</span><br></pre></td></tr></table></figure>
+
+<h3 id="怎么在vue2中使用阿里图标"><a href="#怎么在vue2中使用阿里图标" class="headerlink" title="怎么在vue2中使用阿里图标"></a>怎么在vue2中使用阿里图标</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">第一步：打开阿里图标库 https://www.iconfont.cn/</span><br><span class="line">第二步：搜索要使用的图标，加入购物车，点击右上角的购物车，选择添加至项目，新建</span><br><span class="line">一个自己的项目（建议起自己当前开发的项目名称），把图标添加到这个项目中，点击确定</span><br><span class="line">第三步：确定之后页面自动跳转，选择Font class，点击生成在线链接，点击这个链接，</span><br><span class="line">复制链接中的代码，在项目assets文件夹下新建一个名为icon的文件夹，然后新建一个</span><br><span class="line">名为iconfont.css的文件，将刚刚复制的代码粘贴在这个文件里面</span><br><span class="line">第四步：在main.js中，import <span class="string">&#x27;@/assets/icon/iconfont.css&#x27;</span>//阿里图标库</span><br><span class="line">第五步：在页面中使用，iconfont必须写，class中第二个就是图片上展示的icon名称，</span><br><span class="line">代码如下： &lt;i class=<span class="string">&quot;iconfont icon-all&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="echarts报错"><a href="#echarts报错" class="headerlink" title="echarts报错"></a>echarts报错</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">警告：<span class="built_in">export</span> <span class="string">&#x27;default&#x27;</span> (imported as <span class="string">&#x27;echarts&#x27;</span>) was not found <span class="keyword">in</span> <span class="string">&#x27;echarts&#x27;</span> </span><br><span class="line">导致echarts图表显示不出来，之前引入echarts安装的版本较高，</span><br><span class="line">解决方案：</span><br><span class="line">npm uninstall echarts</span><br><span class="line">npm install echarts@4.9.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="span的用法"><a href="#span的用法" class="headerlink" title="span的用法"></a>span的用法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//第一种用法</span><br><span class="line">data: [</span><br><span class="line">          [</span><br><span class="line">            <span class="string">&#x27;&lt;span style=&quot;font-size:12px&quot;&gt;基础一东&lt;/span&gt;&#x27;</span>,</span><br><span class="line">            <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;电量超标&lt;/span&gt;&quot;</span>,</span><br><span class="line">            <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;2020.12.19&lt;/span&gt;&quot;</span>,</span><br><span class="line">          ],</span><br><span class="line">          [</span><br><span class="line">            <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;基础二西&lt;/span&gt;&quot;</span>,</span><br><span class="line">            <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;温度超标&lt;/span&gt;&quot;</span>,</span><br><span class="line">            <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;2020.12.18&lt;/span&gt;&quot;</span>,</span><br><span class="line">          ],</span><br><span class="line">]</span><br><span class="line">//第二种用法</span><br><span class="line">&lt;span&gt;</span><br><span class="line">      &#123;&#123; time &#125;&#125;</span><br><span class="line">      &lt;button @click=<span class="string">&quot;exit()&quot;</span>&gt;</span><br><span class="line">        &lt;i class=<span class="string">&quot;el-icon-arrow-right&quot;</span> /&gt;</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="轮播表"><a href="#轮播表" class="headerlink" title="轮播表"></a>轮播表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;dv-scroll-board :config=<span class="string">&quot;config1&quot;</span> /&gt;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> &#123;</span><br><span class="line">            config1: &#123;</span><br><span class="line">                header: [<span class="string">&#x27;位置&#x27;</span>, <span class="string">&#x27;告警类型&#x27;</span>, <span class="string">&#x27;时间&#x27;</span>],</span><br><span class="line">                headerBGC: <span class="string">&quot;rgba(0,0,0,0.3)&quot;</span>,//表头背景色</span><br><span class="line">                oddRowBGC: <span class="string">&quot;rgba(255,255,255,0.1)&quot;</span>,//奇数行背景色</span><br><span class="line">                evenRowBGC: <span class="string">&quot;rgba(0,0,0,0)&quot;</span>,//偶数行背景色	</span><br><span class="line">                data: [</span><br><span class="line">                    [</span><br><span class="line">                        <span class="string">&#x27;&lt;span style=&quot;font-size:12px&quot;&gt;基础一东&lt;/span&gt;&#x27;</span>,</span><br><span class="line">                        <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;电量超标&lt;/span&gt;&quot;</span>,</span><br><span class="line">                        <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;2020.12.19&lt;/span&gt;&quot;</span>,</span><br><span class="line">                    ],</span><br><span class="line">                    [</span><br><span class="line">                        <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;基础二西&lt;/span&gt;&quot;</span>,</span><br><span class="line">                        <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;温度超标&lt;/span&gt;&quot;</span>,</span><br><span class="line">                        <span class="string">&quot;&lt;span style=&#x27;font-size:12px&#x27;&gt;2020.12.18&lt;/span&gt;&quot;</span>,</span><br><span class="line">                    ],</span><br><span class="line">                ],</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="加载cesium"><a href="#加载cesium" class="headerlink" title="加载cesium"></a>加载cesium</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install copy-webpack-plugin</span><br><span class="line">npm install @open-wc/webpack-import-meta-loader</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/09/17/%E5%AE%A4%E5%86%85%E5%BB%BA%E6%A8%A1/" data-id="clmmzh5ma000144sxa8umhvlb" class="article-share-link">
+        分享
+      </a>
+      
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  
+  <a href="/2023/09/17/cesium/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">vue2加载cesium</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '5c428a36d9a70c430942',
+    clientSecret: '3b4c82d3877613930437eeade7101706d718c5d8',
+    repo: 'gitalk',
+    owner: 'Augenestern',
+    admin: ['Augenestern'],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
+  
+
+  &emsp;<i class="fe fe-bar-chart"></i> <span class="post-count">1.1k</span>字
+  &emsp;<i class="fe fe-clock"></i> <span class="post-count">5</span>分钟
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <!-- <ul class="list-inline">
+        <li>全站共<span class="post-count">6.9k</span>字</li>
+      </ul>        -->
+      <li>郭婉婷blog &copy; 2023</li>
+      
+        <li>
+          
+            <a href="https://beian.miit.gov.cn/" target="_blank"></a>
+            
+        </li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+    <p><!-- <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt tooltip" data-tooltip="UV"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark tooltip" data-tooltip="PV"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul> -->
+<div class="powered-by">
+  
+	&emsp;<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span></span>&emsp;
+  
+    <i class="fe fe-bookmark"></i>文章访问量:<span id="busuanzi_value_page_pv"></span>
+  
+</div>
+</p>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/shark.svg" alt="郭婉婷blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">首页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/favorites">收藏</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+
+	
+<script src="/js/love.js"></script>
+
+ 
+
+
+</body>
+
+</html>

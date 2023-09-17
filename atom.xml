@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-17T04:41:22.939Z</updated>
+  <updated>2023-09-17T05:15:47.565Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>室内建模</title>
+    <link href="http://example.com/2023/09/17/%E5%AE%A4%E5%86%85%E5%BB%BA%E6%A8%A1/"/>
+    <id>http://example.com/2023/09/17/%E5%AE%A4%E5%86%85%E5%BB%BA%E6%A8%A1/</id>
+    <published>2023-09-17T04:53:39.147Z</published>
+    <updated>2023-09-17T05:15:47.565Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;indoor报错信息&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>vue2加载cesium</title>
     <link href="http://example.com/2023/09/17/cesium/"/>
     <id>http://example.com/2023/09/17/cesium/</id>
     <published>2023-09-17T04:25:02.712Z</published>
-    <updated>2023-09-17T04:41:22.939Z</updated>
+    <updated>2023-09-17T04:48:41.800Z</updated>
     
     
     <summary type="html">&lt;p&gt;室内建模&lt;/p&gt;</summary>
@@ -51,7 +66,7 @@
     <link href="http://example.com/2023/09/16/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
     <id>http://example.com/2023/09/16/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</id>
     <published>2023-09-16T08:35:15.336Z</published>
-    <updated>2023-09-16T02:56:01.189Z</updated>
+    <updated>2023-09-17T04:42:33.251Z</updated>
     
     
     <summary type="html">&lt;p&gt;每天练习的笔记&lt;/p&gt;</summary>
